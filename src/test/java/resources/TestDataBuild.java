@@ -14,11 +14,11 @@ public class TestDataBuild {
 		
 		AddPlace p = new AddPlace();
 		p.setAccuracy(50);
-		p.setAddress(address);
-		p.setLanguage(language);
+		p.setAddress(address);    //dynamically value is taking from placeValidations
+		p.setLanguage(language);   //dynamically value is taking from placeValidations
 		p.setPhone_number("(+91) 983 893 3937");
 		p.setWebsite("http://google.com");
-		p.setName(name);
+		p.setName(name);     //dynamically value is taking from placeValidations
 		List<String> myList = new ArrayList<String>();     //Creating object class for arrayList due to array mentioned in List.
 		myList.add("shoe park");
 		myList.add("shop");
@@ -29,7 +29,7 @@ public class TestDataBuild {
 		l.setLng(33.427362);
 		
 		p.setLocation(l);
-		return p;
+		return p;   //returning object p
 		
 	}
 	public String deletePlacePayload(String placeId)

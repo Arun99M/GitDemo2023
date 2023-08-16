@@ -10,15 +10,18 @@ Scenario Outline: Verify if place is being successfully added using AddPlaceAPI 
 	
 	
 	
-Examples:  //drive the data Dynamically //multiple tests need to test then take and give other column 
+Examples:  //drive the data Dynamically //multiple tests need to test then take and give other column |pipe operator|
 	|name   | language| address          |
 	|AAhouse|English  |World cross Centre|
 #	|BBhouse|Spanish  |Sea   cross Centre|
 
 @DeletePlace
-Scenario: verify if Delete Place functionality is working
+Scenario: verify if Delete Place functionality is working.
 
-      Given DeletePlace Payload 
- 			When user calls "deletePlaceAPI" with "POST" http request
- 			Then the API call got success with status code 200
- 			And "status" in response body is "OK"
+     	Given DeletePlace Payload 
+ 		 	When user calls "deletePlaceAPI" with "POST" http request
+    	Then the API call got success with status code 200
+ 			And "status" in response body is "OK"  
+ 			
+ 			
+ 			

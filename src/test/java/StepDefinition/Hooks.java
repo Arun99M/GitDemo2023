@@ -2,7 +2,9 @@ package StepDefinition;
 
 import java.io.IOException;
 
-import cucumber.api.java.Before;
+import io.cucumber.java.Before;
+
+
 
 public class Hooks {
 
@@ -20,7 +22,7 @@ public class Hooks {
 		if(StepDefinitions.place_id==null)
 		{
 		m.add_place_payload_with("Shetty","french", "Asia");
-	    m.user_calls_with_post_http_request("AddPlaceAPI", "POST");
+	    m.user_calls_with_http_request("AddPlaceAPI", "POST");
 	    m.verify_place_id_created_maps_to_using("Shetty","getPlaceAPI");
 		}
 	}
